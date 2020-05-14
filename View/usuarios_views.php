@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>MVCProject</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -12,24 +12,49 @@
 <style>
   .container {
     text-align: center;
+    margin:center;
+    margin-top: 120px;
   }
+.letra{
+
+  color: gold;
+  font-size: 50px;
+}
+
+.parrafo{
+
+  color: maroon;
+  font-size:20px ;
+
+}
+
+.fila{
+  margin-left: 50px;
+  text-align: center;
+}
+
+.table{
+  margin-top: 50px;
+}
+
 </style>
 <body>
 
 
 <div class="container">
-  <h2>Vista de ejemplo</h2>
-  <p>Por medio de este ejemplo me muestra el modelo vista controlador en PHP</p>   
+  <h2 class="letra">Modelo Vista Controlador</h2>
+  <p class="parrafo">Por medio de este ejemplo me muestra el modelo vista controlador en PHP, 
+    integrado con el servicio de nube de Heroku, con base de datos de remoteMYSQL, y accedido mediante GIT bash.</p>   
  
-  <table class="table">
+    <table class="table" class="content-aling-center">
     <thead>
-      <tr>
-        <th>Nombre</th>
+     <tr>
+    <th>Nombre</th>
         <th>Apellido</th>
         <th>Email</th>
       </tr>
     </thead>
-    <tbody class="container">
+    <tbody class="">
     <?php
       foreach ($datos as $dato){
     ?><tr>
@@ -41,6 +66,7 @@
     </tbody>
   </table>
 </div>
+
 
 </body>
 </html>
