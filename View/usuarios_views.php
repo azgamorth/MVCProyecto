@@ -8,20 +8,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
+<style>
+  .container {
+    text-align: center;
+  }
+</style>
 <body>
 
 
 <div class="container">
   <h2>Vista de ejemplo</h2>
   <p>Por medio de este ejemplo me muestra el modelo vista controlador en PHP</p>   
-  <?php
-  // Esta es la vista donde se recorre con el ciclo foreach la consulta del metodo llamada get_usuarios();
-
-foreach ($datos as $dato){
-
-
-?>
-         
+ 
   <table class="table">
     <thead>
       <tr>
@@ -30,19 +29,17 @@ foreach ($datos as $dato){
         <th>Email</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
+    <tbody class="container">
+    <?php
+      foreach ($datos as $dato){
+    ?><tr>
         <td><?php echo $dato["nombre"]. " "; ?></td>
         <td><?php echo $dato["apellido"]. " "; ?></td>
         <td><?php echo $dato["correo"]. " "; ?></td>
       </tr>
+      <?php } ?>
     </tbody>
   </table>
-
-  <?php
-  
-}
-  ?>
 </div>
 
 </body>
